@@ -10,26 +10,17 @@ public interface Pokemon {
 }
 
 
-class Pikachu implements Pokemon{
+class Pikachu implements AttackablePokemon{
     // violate ISP
     // 날지못하는 피카츄도 날아야함.
+
     @Override
     public void attack() {
-
+        System.out.println("10만 볼트 공격 성공");
     }
 
     @Override
     public void defend() {
-
-    }
-
-    @Override
-    public void fly() {
-
-    }
-
-    @Override
-    public void swim() {
-
+        System.out.println("방어 성공!");
     }
 }
